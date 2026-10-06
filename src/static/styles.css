@@ -58,20 +58,136 @@ section h3 {
 }
 
 .activity-card {
-  margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  margin-bottom: 16px;
+  padding: 18px;
+  border: 1px solid #e1e5eb;
+  border-left: 4px solid #3949ab;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.activity-card:hover {
+  box-shadow: 0 6px 16px rgba(26, 35, 126, 0.12);
+  transform: translateY(-2px);
 }
 
 .activity-card h4 {
-  margin-bottom: 10px;
-  color: #0066cc;
+  margin-bottom: 8px;
+  color: #1a237e;
+  font-size: 1.15rem;
+}
+
+.availability {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 8px;
+  color: #2e7d32;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.availability-bar {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: #e8eaf6;
+}
+
+.availability-fill {
+  height: 100%;
+  border-radius: 3px;
+  background-color: #3949ab;
 }
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.activity-participants {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e1e5eb;
+}
+
+.activity-participants h5 {
+  margin-bottom: 6px;
+  color: #1a237e;
+  font-size: 0.95rem;
+}
+
+.participants-list {
+  display: grid;
+  gap: 4px;
+  padding-left: 0;
+  color: #414b5a;
+  list-style: none;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background-color: #f5f6fb;
+}
+
+.participant-avatar {
+  display: grid;
+  flex: 0 0 28px;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #3949ab;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.participant-email {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.participants-list .no-participants {
+  margin-left: 0;
+  color: #687386;
+  font-style: italic;
+}
+
+.remove-participant-button {
+  display: grid;
+  flex: 0 0 32px;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: #687386;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.remove-participant-button:hover {
+  border-color: #ef9a9a;
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.remove-participant-button:focus-visible {
+  outline: 2px solid #1a237e;
+  outline-offset: 2px;
+}
+
+.remove-participant-button:disabled {
+  cursor: wait;
+  opacity: 0.55;
 }
 
 .form-group {
